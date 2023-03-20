@@ -16,6 +16,19 @@ body {
     justify-content: center;
     margin: 0;
     min-height: 100vh;
+    background-color: aquamarine;
+}
+
+.arrow {
+    
+}
+
+.ip-info {
+    margin: 0 auto;
+}
+
+.ip-address-display, .location, .timezone, .utc, .isp {
+    color: var(--dark-gray)
 }
 
 .attribution {
@@ -26,4 +39,4 @@ body {
 	color: hsl(228, 45%, 44%);
 }
 
-/*use bootstrap, react and API in this project*/
+/*use bootstrap and API in this project*/
