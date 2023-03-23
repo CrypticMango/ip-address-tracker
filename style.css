@@ -13,18 +13,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 0;
     min-height: 100vh;
-    background-color: aquamarine;
+    background: url(/images/pattern-bg-mobile.png) no-repeat;
 }
 
+
+
 .arrow {
-    
+    position: relative;
+    top: -47px;
+    left: 220px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.arrow:hover {
+    background-color: var(--bs-tertiary-bg);
 }
 
 .ip-info {
     margin: 0 auto;
+    position: relative;
+    top: -30px;
 }
 
 .ip-address-display, .location, .timezone, .utc, .isp {
