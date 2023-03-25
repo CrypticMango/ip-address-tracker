@@ -9,16 +9,17 @@ fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=988347346abd482f8b13e24
     let addressResult = document.querySelector("#address-result");
     addressResult.innerHTML = `${address}`;
 
-    location = data.location;
+    let location = data.city;
     let locationResult = document.querySelector("#location-result");
     locationResult.innerHTML = `${location}`;
 
-    let timezone = data.timezone.edt;
+    let timezone = data.timezone.abbreviation;
+    let offset = data.timezone.gmt_offset;
     let timezoneResult = document.querySelector("#timezone-result");
-    timezoneResult.innerHTML = `${timezone}`;
+    timezoneResult.innerHTML = `${timezone + offset + ":00"}`;
 
     let isp = data.connection.isp_name;
     let ispResult = document.querySelector("#isp-result");
-    ispResult.innerHTML = `${isp}`
+    ispResult.innerHTML = `${isp}`;
 })
 
