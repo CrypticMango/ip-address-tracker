@@ -16,6 +16,7 @@ body {
     margin: 0;
     min-height: 100vh;
     background: url(/images/pattern-bg-mobile.png) no-repeat;
+    font-family: 'Rubik', sans-serif;
 }
 
 .arrow {
@@ -36,8 +37,19 @@ body {
     width: 20px;
 }
 
-.ip-address-display, .location, .timezone, .utc, .isp {
-    color: var(--dark-gray)
+.info-label {
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dark-gray);
+}
+
+.results {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--very-dark-gray);
 }
 
 .attribution {
@@ -48,5 +60,3 @@ body {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
-
-/*use bootstrap and API in this project*/

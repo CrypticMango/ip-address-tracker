@@ -27,6 +27,17 @@
 			crossorigin="anonymous"
 		/>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+
 		<link rel="stylesheet" href="style.css" />
 
 		<title>Frontend Mentor | IP Address Tracker</title>
@@ -55,18 +66,18 @@
 		</div>
 
 		<div class="ip-info bg-white w-75 text-center rounded-4 p-4">
-			<p class="ip-address-display">IP Address</p>
-      <p id="address-result"></p>
+			<p class="info-label">IP Address</p>
+			<p id="address-result" class="results"></p>
 
-			<p class="location">Location</p>
-      <p id="location-result"></p>
+			<p class="info-label">Location</p>
+			<p id="location-result" class="results"></p>
 
-			<p class="timezone">Timezone</p>
-      <p class="utc" id="timezone-result">UTC</p>
-     
+			<p class="info-label">Timezone</p>
+			<p class="results" id="timezone-result">UTC</p>
+
 			<!-- add offset value dynamically using the API -->
-			<p class="isp">ISP</p>
-      <p id="isp-result"></p>
+			<p class="info-label">ISP</p>
+			<p id="isp-result" class="results"></p>
 		</div>
 
 		<img

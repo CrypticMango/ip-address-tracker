@@ -10,8 +10,10 @@ fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=988347346abd482f8b13e24
     addressResult.innerHTML = `${address}`;
 
     let location = data.city;
+    let region = data.region_iso_code;
+    let postalCode = data.postal_code;
     let locationResult = document.querySelector("#location-result");
-    locationResult.innerHTML = `${location}`;
+    locationResult.innerHTML = `${location + ", " + region + " "+ postalCode}`;
 
     let timezone = data.timezone.abbreviation;
     let offset = data.timezone.gmt_offset;
