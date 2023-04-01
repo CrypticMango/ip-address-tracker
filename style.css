@@ -1,55 +1,60 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-    --very-dark-gray: hsl(0, 0%, 17%);
-    --dark-gray: hsl(0, 0%, 59%);
+	--very-dark-gray: hsl(0, 0%, 17%);
+	--dark-gray: hsl(0, 0%, 59%);
 }
 
 body {
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    min-height: 100vh;
-    background: url(/images/pattern-bg-mobile.png) no-repeat;
-    font-family: 'Rubik', sans-serif;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+	min-height: 100vh;
+	background: url(/images/pattern-bg-mobile.png) no-repeat;
+	font-family: "Rubik", sans-serif;
 }
 
 .arrow {
-    position: relative;
-    top: -47px;
-    left: 220px;
-    border-radius: 0px 10px 10px 0px;
+	position: relative;
+	top: -47px;
+	left: 220px;
+	border-radius: 0px 10px 10px 0px;
 }
 
 .arrow:hover {
-    background-color: var(--bs-tertiary-bg);
+	background-color: var(--bs-tertiary-bg);
 }
 
 .ip-info {
-    margin: 0 auto;
-    position: relative;
-    top: -30px;
-    width: 20px;
+	margin: 0 auto;
+	position: relative;
+	top: -30px;
+	width: 20px;
 }
 
 .info-label {
-    font-size: 10px;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--dark-gray);
+	font-size: 10px;
+	font-weight: 700;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: var(--dark-gray);
 }
 
 .results {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--very-dark-gray);
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--very-dark-gray);
+}
+
+#map {
+    width: 300px;
+	height: 380px;
 }
 
 .attribution {
