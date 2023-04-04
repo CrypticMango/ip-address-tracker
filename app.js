@@ -1,3 +1,5 @@
+
+
 fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=988347346abd482f8b13e2467d03d81b")
 .then((reponse) => {
     return reponse.json();
@@ -25,6 +27,10 @@ fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=988347346abd482f8b13e24
     ispResult.innerHTML = `${isp}`;
 })
 
+var blackIcon = L.icon({
+    iconUrl: '/images/icon-location.svg'
+});
+
 var map = L.map('map');
 map.setView([51.505, -0.09], 13);
 
@@ -40,8 +46,9 @@ function success(pos) {
     const lng = pos.coords.longitude;
     const accuracy = pos.coords.accuracy;
 
-    L.marker([lat, lng]).addTo(map);
-    L.circle([lat, lng], { radius: accuracy }).addTo(map);
+    L.marker([lat, lng], {icon: blackIcon}).addTo(map);
+    //L.circle([lat, lng], { radius: accuracy }).addTo(map);
+    map.panTo(new L.LatLng(lat, lng));
 }
 
 function error(err) {
@@ -52,4 +59,10 @@ function error(err) {
         alert("Cannot get current location");
     }
 
+}
+
+function centerLeafletMapOnMarker(map, marker) {
+  var lat = [ marker.getLatLng() ];
+  var markerBounds = L.latLngBounds(lat);
+  map.fitBounds(markerBounds);
 }
