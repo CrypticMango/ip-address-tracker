@@ -17,18 +17,13 @@ body {
 	min-height: 100vh;
 	background: url(/images/pattern-bg-mobile.png) no-repeat;
 	font-family: "Rubik", sans-serif;
+	overflow-x: hidden;
 }
 
-.arrow {
-	position: relative;
-	top: -47px;
-	left: 220px;
+.btn {
+	border: 1px solid FFFFFF;
 	border-radius: 0px 10px 10px 0px;
-}
-
-.arrow:hover {
-	background-color: var(--bs-tertiary-bg);
-}
+ }
 
 .ip-info {
 	margin: 0 auto;
@@ -55,10 +50,24 @@ body {
 
 #map {
 	position: relative;
-	top: -175px;
-    width: 600px;
-	height: 600px;
+	left: -25px;
+	top: -185px;
+    width: 470px;
+	height: 450px;
 	z-index: 1;
+}
+
+input::placeholder {
+	font-size: 12px;
+	position: relative;
+	top: -3px;
+	left: -5px;
+  }
+
+#submit {
+	position: relative;
+	top: -48px;
+	left: 225px;
 }
 
 .attribution {

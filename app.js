@@ -1,8 +1,6 @@
-
-
 fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=988347346abd482f8b13e2467d03d81b")
-.then((reponse) => {
-    return reponse.json();
+.then((response) => {
+    return response.json();
 })
 .then ((data) => {
     console.log(data);
@@ -65,4 +63,13 @@ function centerLeafletMapOnMarker(map, marker) {
   var lat = [ marker.getLatLng() ];
   var markerBounds = L.latLngBounds(lat);
   map.fitBounds(markerBounds);
+}
+
+var searchBar = document.querySelector("#ipsearch");
+var submitButton = document.querySelector("#submit");
+
+submitButton.addEventListener("click", searchAddress);
+
+function searchAddress() {
+    alert("hi, still working on this :D");
 }
