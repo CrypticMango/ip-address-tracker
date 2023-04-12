@@ -23,6 +23,10 @@ fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=988347346abd482f8b13e24
     let isp = data.connection.isp_name;
     let ispResult = document.querySelector("#isp-result");
     ispResult.innerHTML = `${isp}`;
+
+    const lati = data.latitude;
+    const longi = data.longitude;
+    map.panTo(new L.LatLng(lati, longi));
 })
 
 var blackIcon = L.icon({
@@ -71,5 +75,5 @@ var submitButton = document.querySelector("#submit");
 submitButton.addEventListener("click", searchAddress);
 
 function searchAddress() {
-    alert("hi, still working on this :D");
+    alert(searchBar.value);
 }
