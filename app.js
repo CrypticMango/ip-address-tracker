@@ -1,10 +1,12 @@
+let ipList = [];
+
 fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=988347346abd482f8b13e2467d03d81b")
 .then((response) => {
     return response.json();
 })
 .then ((data) => {
     console.log(data);
-
+    ipList = data.ip_address;
     let address = data.ip_address;
     let addressResult = document.querySelector("#address-result");
     addressResult.innerHTML = `${address}`;
@@ -72,8 +74,12 @@ function centerLeafletMapOnMarker(map, marker) {
 var searchBar = document.querySelector("#ipsearch");
 var submitButton = document.querySelector("#submit");
 
-submitButton.addEventListener("click", searchAddress);
+searchBar.addEventListener("keyup", (e) => {
+    console.log(e.target.value);
+});
 
-function searchAddress() {
+function searchAddress(event) {
+    const ipSearched = event.target.value;
+    
     alert(searchBar.value);
 }
